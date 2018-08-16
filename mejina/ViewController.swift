@@ -11,11 +11,11 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var text: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        text.stringValue = "helo"
         let app = NSApplication.shared.delegate as! AppDelegate
         app.view = self
     }
@@ -26,7 +26,6 @@ class ViewController: NSViewController {
     }
 
     @IBAction func onClick(_ sender: NSButton) {
-        print("onclick")
         if let url = URL(string: text.stringValue) {
 //            let alert = NSAlert()
 //            alert.messageText = url.absoluteString
@@ -45,11 +44,11 @@ class ViewController: NSViewController {
 //        }
 //    }
     
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
+//    override var representedObject: Any? {
+//        didSet {
+//        // Update the view, if already loaded.
+//        }
+//    }
 
 
 }

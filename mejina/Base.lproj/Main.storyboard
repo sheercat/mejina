@@ -30,6 +30,50 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Edit" id="Ho8-cq-fTF">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Edit" id="7Me-Ij-f2z">
+                                    <items>
+                                        <menuItem title="Undo" keyEquivalent="z" id="Mka-Vw-kZB">
+                                            <connections>
+                                                <action selector="undo:" target="Ady-hI-5gd" id="l9z-Iv-XjR"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Redo" keyEquivalent="Z" id="fJr-IO-zs6">
+                                            <connections>
+                                                <action selector="redo:" target="Ady-hI-5gd" id="OEf-5r-8qI"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="RSr-Fx-vIS"/>
+                                        <menuItem title="Cut" keyEquivalent="x" id="pYj-1Y-Vz0">
+                                            <connections>
+                                                <action selector="cut:" target="Ady-hI-5gd" id="5wg-i8-4F7"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Copy" keyEquivalent="c" id="K5s-u1-tpd">
+                                            <connections>
+                                                <action selector="copy:" target="Ady-hI-5gd" id="45f-bf-LdJ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste" keyEquivalent="v" id="b9w-Jq-AhI">
+                                            <connections>
+                                                <action selector="paste:" target="Ady-hI-5gd" id="fsD-8C-wvP"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Delete" id="0z6-3U-ao2">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="delete:" target="Ady-hI-5gd" id="0tJ-Yq-40y"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Select All" keyEquivalent="a" id="Qeg-8E-WIo">
+                                            <connections>
+                                                <action selector="selectAll:" target="Ady-hI-5gd" id="e79-Gd-8RR"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -72,10 +116,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bXE-L1-Wg7">
-                                <rect key="frame" x="20" y="20" width="518" height="22"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="luw-nJ-8Ot">
-                                    <font key="font" metaFont="system"/>
+                                <rect key="frame" x="20" y="20" width="512" height="22"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="url" drawsBackground="YES" id="luw-nJ-8Ot">
+                                    <font key="font" size="15" name="Courier"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <connections>
@@ -84,8 +128,8 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-Xh-f5S">
-                                <rect key="frame" x="546" y="21" width="43" height="19"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="540" y="21" width="60" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundRect" title="done" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4xr-Zk-ox6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
