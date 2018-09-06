@@ -28,16 +28,37 @@ class ViewController: NSViewController {
         text.stringValue = url
     }
     
-    @IBAction func onClick(_ sender: NSButton) {
+    func openUrl() {
         if let url = URL(string: text.stringValue) {
             //            let alert = NSAlert()
             //            alert.messageText = url.absoluteString
             //            alert.runModal()
-            
             NSWorkspace.shared.open(url)
-            exit(0)
+            NSApplication.shared.terminate(self)
         }
     }
+    
+    @IBAction func onClick(_ sender: NSButton) {
+        openUrl()
+    }
+    
+    override func cancelOperation(_ sender: Any?) {
+        NSLog("cancelOperation")
+        NSApplication.shared.terminate(self)
+    }
+    
+    override func keyUp(with event: NSEvent) {
+//        print(event.keyCode)
+        if event.keyCode == 36 { // enter or carried return
+            openUrl()
+        }
+//        self.interpretKeyEvents([event])
+    }
+  
+//    override func insertText(_ insertString: Any) {
+//        print(insertString)
+//        super.insertText(insertString)
+//    }
     
     //    @IBAction func done(_ sender: NSTextFieldCell) {
     //        print("done")
